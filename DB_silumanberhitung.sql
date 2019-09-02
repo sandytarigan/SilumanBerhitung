@@ -142,6 +142,9 @@ ALTER TABLE `user`
 ALTER TABLE `pelajar`
   ADD CONSTRAINT `pelajar_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `user` (`idUser`),
   ADD CONSTRAINT `pelajar_ibfk_2` FOREIGN KEY (`idSkor`) REFERENCES `skor` (`idSkor`);
+  
+SELECT * FROM 'pelajar';
+SELECT * FROM 'user';
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
