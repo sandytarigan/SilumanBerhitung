@@ -86,6 +86,46 @@ INSERT INTO `user` (`idUser`, `username`, `password`, `peran`) VALUES
 (1, 'haydar', 'sdjhadas', 'Pelajar'),
 (2, 'iday', 'fsdalkjfsfj', 'Guru');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `guru`
+--
+
+CREATE TABLE `siluman berhitung`.`guru` ( 
+    `idGuru` INT(10) UNSIGNED NOT NULL , 
+    `nama` VARCHAR(30) NOT NULL , 
+    `email` VARCHAR(30) NOT NULL , 
+    `idUser` INT(10) UNSIGNED NOT NULL , 
+    PRIMARY KEY (`idGuru`)
+    ) ENGINE = InnoDB;
+
+--
+-- Dumping data for table `guru`
+--
+
+INSERT INTO `guru` (`idGuru`, `nama`, `email`, `idUser`) VALUES ('01', 'Bu Anissa', 'dosencantik@gmail.com', 'bunissa');
+
+-- --------------------------------------------------------
+--
+-- Table structure for table `soal dan kunci jawaban`
+--
+
+CREATE TABLE `siluman berhitung`.`Soal Dan Kunci Jawaban` ( 
+      `idSoalDanKunJaw` INT(10) UNSIGNED NOT NULL , 
+      `soal` VARCHAR(1000) NOT NULL , 
+      `jawaban` VARCHAR(1000) NOT NULL , 
+      `idGuru` INT(10) UNSIGNED NOT NULL , 
+      PRIMARY KEY (`idSoalDanKunJaw`)
+      ) ENGINE = InnoDB;
+
+--
+-- Dumping data for table `soal dan kunci jawaban`
+--
+
+INSERT INTO `soal dan kunci jawaban` (`idSoalDanKunJaw`, `soal`, `jawaban`, `idGuru`) VALUES ('01', 'siapa saya?', 'gak peduli, next', '1');
+
+-- --------------------------------------------------------
 --
 -- Indexes for dumped tables
 --
