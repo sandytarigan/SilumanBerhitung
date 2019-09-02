@@ -196,7 +196,7 @@ COMMIT;
 -- Table structure for table `skortertinggi`
 --
 
-CREATE TABLE `skortertinggi` (
+CREATE TABLE 'siluman berhitung'.`skortertinggi` (
   `peringkat` int(5) UNSIGNED NOT NULL,
   `benar` int(10) NOT NULL,
   `salah` int(10) NOT NULL,
