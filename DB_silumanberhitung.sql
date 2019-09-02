@@ -105,6 +105,7 @@ CREATE TABLE `siluman berhitung`.`guru` (
 --
 
 INSERT INTO `guru` (`idGuru`, `nama`, `email`, `idUser`) VALUES ('01', 'Bu Anissa', 'dosencantik@gmail.com', 'bunissa');
+INSERT INTO `guru` (`idGuru`, `nama`, `email`, `idUser`) VALUES ('02', 'Pak Jondri', 'gurupanutan@gmail.com', 'pakjondri');
 
 -- --------------------------------------------------------
 --
@@ -124,6 +125,7 @@ CREATE TABLE `siluman berhitung`.`Soal Dan Kunci Jawaban` (
 --
 
 INSERT INTO `soal dan kunci jawaban` (`idSoalDanKunJaw`, `soal`, `jawaban`, `idGuru`) VALUES ('01', 'siapa saya?', 'gak peduli, next', '1');
+INSERT INTO `soal dan kunci jawaban` (`idSoalDanKunJaw`, `soal`, `jawaban`, `idGuru`) VALUES ('02', '2+3', '5', '02');
 
 -- --------------------------------------------------------
 --
