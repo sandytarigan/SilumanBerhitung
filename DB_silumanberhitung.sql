@@ -187,6 +187,9 @@ ALTER TABLE `pelajar`
   
 SELECT * FROM 'pelajar';
 SELECT * FROM 'user';
+SELECT * FROM 'guru';
+SELECT * FROM 'skor';
+SELECT * FROM 'soal dan kunci jawaban';
 COMMIT;
 
 --
