@@ -89,6 +89,33 @@ INSERT INTO `user` (`idUser`, `username`, `password`, `peran`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `skortertinggi`
+--
+
+CREATE TABLE 'siluman berhitung'.`skortertinggi` (
+  `peringkat` int(5) UNSIGNED NOT NULL,
+  `benar` int(10) NOT NULL,
+  `salah` int(10) NOT NULL,
+  `total` int(10) NOT NULL,
+  'skor' int (10) NOT NULL,
+  PRIMARY KEY ('peringkat')
+) ENGINE=InnoDB ;
+
+--
+-- Dumping data for table `skortertinggi`
+--
+
+INSERT INTO `skortertinggi` (`peringkat`, `benar`, `salah`, `total`, 'skor') VALUES
+(1, '5', '5', '5', '10', '300'),
+(2, '3', '7', '3', '10', '500'),
+(3, '2', '8', '2', '10', '800'),
+(4, '1', '10', '0', '10', '1000');
+
+--
+-- Table structure for table `skortertinggi`
+--
+
+--
 -- Table structure for table `guru`
 --
 
@@ -187,40 +214,7 @@ SELECT * FROM 'pelajar';
 SELECT * FROM 'user';
 COMMIT;
 
---
--- Table structure for table `skortertinggi`
---
 
-CREATE TABLE 'siluman berhitung'.`skortertinggi` (
-  `peringkat` int(5) UNSIGNED NOT NULL,
-  `benar` int(10) NOT NULL,
-  `salah` int(10) NOT NULL,
-  `total` int(10) NOT NULL,
-  'skor' int (10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `skortertinggi`
---
-
-INSERT INTO `skortertinggi` (`peringkat`, `benar`, `salah`, `total`, 'skor') VALUES
-(1, '5', '5', '5', '10', '300'),
-(2, '3', '7', '3', '10', '500'),
-(3, '2', '8', '2', '10', '800'),
-(4, '1', '10', '0', '10', '1000');
-
---
--- Indexes for dumped tables
---
-
--- Indexes for table `skortertinggi`
---
-ALTER TABLE `skortertinggi`
-  ADD PRIMARY KEY (`peringkat`);
-
---
-SELECT * FROM 'skortertinggi';
-COMMIT;
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
