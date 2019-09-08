@@ -86,6 +86,73 @@ INSERT INTO `user` (`idUser`, `username`, `password`, `peran`) VALUES
 (1, 'haydar', 'sdjhadas', 'Pelajar'),
 (2, 'iday', 'fsdalkjfsfj', 'Guru');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `skortertinggi`
+--
+
+CREATE TABLE 'siluman berhitung'.`skortertinggi` (
+  `peringkat` int(5) UNSIGNED NOT NULL,
+  `benar` int(10) NOT NULL,
+  `salah` int(10) NOT NULL,
+  `total` int(10) NOT NULL,
+  'skor' int (10) NOT NULL,
+  PRIMARY KEY ('peringkat')
+) ENGINE=InnoDB ;
+
+--
+-- Dumping data for table `skortertinggi`
+--
+
+INSERT INTO `skortertinggi` (`peringkat`, `benar`, `salah`, `total`, 'skor') VALUES
+(1, '5', '5', '5', '10', '300'),
+(2, '3', '7', '3', '10', '500'),
+(3, '2', '8', '2', '10', '800'),
+(4, '1', '10', '0', '10', '1000');
+
+--
+-- Table structure for table `skortertinggi`
+--
+
+--
+-- Table structure for table `guru`
+--
+
+CREATE TABLE `siluman berhitung`.`guru` ( 
+    `idGuru` INT(10) UNSIGNED NOT NULL , 
+    `nama` VARCHAR(30) NOT NULL , 
+    `email` VARCHAR(30) NOT NULL , 
+    `idUser` INT(10) UNSIGNED NOT NULL , 
+    PRIMARY KEY (`idGuru`)
+    ) ENGINE = InnoDB;
+
+--
+-- Dumping data for table `guru`
+--
+
+INSERT INTO `guru` (`idGuru`, `nama`, `email`, `idUser`) VALUES ('01', 'Bu Anissa', 'dosencantik@gmail.com', 'bunissa');
+
+-- --------------------------------------------------------
+--
+-- Table structure for table `soal dan kunci jawaban`
+--
+
+CREATE TABLE `siluman berhitung`.`Soal Dan Kunci Jawaban` ( 
+      `idSoalDanKunJaw` INT(10) UNSIGNED NOT NULL , 
+      `soal` VARCHAR(1000) NOT NULL , 
+      `jawaban` VARCHAR(1000) NOT NULL , 
+      `idGuru` INT(10) UNSIGNED NOT NULL , 
+      PRIMARY KEY (`idSoalDanKunJaw`)
+      ) ENGINE = InnoDB;
+
+--
+-- Dumping data for table `soal dan kunci jawaban`
+--
+
+INSERT INTO `soal dan kunci jawaban` (`idSoalDanKunJaw`, `soal`, `jawaban`, `idGuru`) VALUES ('01', 'siapa saya?', 'gak peduli, next', '1');
+
+-- --------------------------------------------------------
 --
 -- Indexes for dumped tables
 --
@@ -142,7 +209,13 @@ ALTER TABLE `user`
 ALTER TABLE `pelajar`
   ADD CONSTRAINT `pelajar_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `user` (`idUser`),
   ADD CONSTRAINT `pelajar_ibfk_2` FOREIGN KEY (`idSkor`) REFERENCES `skor` (`idSkor`);
+  
+SELECT * FROM 'pelajar';
+SELECT * FROM 'user';
 COMMIT;
+
+
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
