@@ -105,6 +105,7 @@ CREATE TABLE `siluman berhitung`.`guru` (
 --
 
 INSERT INTO `guru` (`idGuru`, `nama`, `email`, `idUser`) VALUES ('01', 'Bu Anissa', 'dosencantik@gmail.com', 'bunissa');
+INSERT INTO `guru` (`idGuru`, `nama`, `email`, `idUser`) VALUES ('02', 'Pak Jondri', 'gurupanutan@gmail.com', 'pakjondri');
 
 -- --------------------------------------------------------
 --
@@ -124,6 +125,7 @@ CREATE TABLE `siluman berhitung`.`Soal Dan Kunci Jawaban` (
 --
 
 INSERT INTO `soal dan kunci jawaban` (`idSoalDanKunJaw`, `soal`, `jawaban`, `idGuru`) VALUES ('01', 'siapa saya?', 'gak peduli, next', '1');
+INSERT INTO `soal dan kunci jawaban` (`idSoalDanKunJaw`, `soal`, `jawaban`, `idGuru`) VALUES ('02', '2+3', '5', '02');
 
 -- --------------------------------------------------------
 --
@@ -185,8 +187,35 @@ ALTER TABLE `pelajar`
   
 SELECT * FROM 'pelajar';
 SELECT * FROM 'user';
+SELECT * FROM 'guru';
+SELECT * FROM 'skor';
+SELECT * FROM 'soal dan kunci jawaban';
 COMMIT;
 
+<<<<<<< HEAD
+--
+-- Table structure for table `skortertinggi`
+--
+
+CREATE TABLE `skortertinggi` (
+  `peringkat` int(5) UNSIGNED NOT NULL,
+  `benar` int(10) NOT NULL,
+  `salah` int(10) NOT NULL,
+  `total` int(10) NOT NULL,
+  'skor' int (10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `skortertinggi`
+--
+
+INSERT INTO `skortertinggi` (`peringkat`, `benar`, `salah`, `total`, 'skor') VALUES
+(1, '5', '5', '5', '10', '300'),
+(2, '3', '7', '3', '10', '500'),
+(3, '2', '8', '2', '10', '800'),
+(4, '1', '10', '0', '10', '1000');
+=======
+>>>>>>> 1dd04e3b47830195cfbc57aecb8c62446e4d84f2
 
 
 
